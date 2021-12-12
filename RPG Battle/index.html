@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<head>
+
+    <link rel="stylesheet" href = "styles.css">
+    <script src="main.js" async></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">  
+    <title>RPG Battle</title>
+
+
+<body>
+
+<section>
+
+    <audio id="myAudio">
+            
+            <source id = "battleTheme" src="8bit-Battle01.mp3" type="audio/mpeg">
+        
+            
+    </audio>
+
+    <audio id = "clickSound">
+
+            <source id = "clickSound" src="Ressources/Sounds/Click.wav" type="audio/wav">
+
+
+    </audio>
+
+    <audio id = "attackFireSimple">
+
+        <source src="Ressources/Sounds/FireAttackSimple.wav" type="audio/wav">
+
+
+    </audio>
+
+    <audio id = "attackWaterSimple">
+
+        <source src="Ressources/Sounds/WaterAttackSimple.wav" type="audio/wav">
+
+
+    </audio>
+
+    <audio id = "attackEarthSimple">
+
+        <source src="Ressources/Sounds/EarthAttackSimple.wav" type="audio/wav">
+
+
+    </audio>
+
+    <audio id = "attackWindSimple">
+
+        <source src="Ressources/Sounds/WindAttackSimple.wav" type="audio/wav">
+
+
+    </audio>
+
+    <audio id = "fireSpecial">
+
+        <source src="Ressources/Sounds/FireSpecial.wav" type="audio/wav">
+
+
+    </audio>
+
+    <audio id = "waterSpecial">
+
+        <source src="Ressources/Sounds/WaterSpecial.wav" type="audio/wav">
+
+
+    </audio>
+
+    <audio id = "earthSpecial">
+
+        <source src="Ressources/Sounds/EarthSpecial.wav" type="audio/wav">
+
+
+    </audio>
+
+
+    <audio id = "windSpecial">
+
+        <source src="Ressources/Sounds/WindSpecial.wav" type="audio/wav">
+
+
+    </audio>
+
+    <audio id = "fireDamage">
+
+        <source src="Ressources/Sounds/FireDamage.wav" type="audio/wav">
+
+
+    </audio>
+
+    <audio id = "waterDamage">
+
+        <source src="Ressources/Sounds/WaterDamage.wav" type="audio/wav">
+
+
+    </audio>
+
+    <audio id = "earthDamage">
+
+        <source src="Ressources/Sounds/EarthDamage.wav" type="audio/wav">
+
+
+    </audio>
+
+    <audio id = "windDamage">
+
+        <source src="Ressources/Sounds/WindDamage.wav" type="audio/wav">
+
+
+    </audio>
+
+    <audio id = "victory">
+
+        <source src="Ressources/Sounds/Victory.mp3" type="audio/mpeg">
+
+
+    </audio>
+
+    <audio id = "minotaurDamage">
+
+        <source src="Ressources/Sounds/MinotaurDamage.mp3" type="audio/mpeg">
+
+
+    </audio>
+
+    <audio id = "ogreDamage">
+
+        <source src="Ressources/Sounds/OgreDamage.mp3" type="audio/mpeg">
+
+
+    </audio>
+
+    <audio id = "satyrDamage">
+
+        <source src="Ressources/Sounds/satyrDamage.mp3" type="audio/mpeg">
+
+
+    </audio>
+
+
+</section>
+
+
+    <section id = "screen">
+
+        <section id = "topSideScreen">
+    
+
+            <section id = "dialogue">
+
+                <div id = "messageDisplayed"></div>
+
+
+            </section>
+            
+        <article id = "musicButton">
+
+            <img id = "musicButtonIMG" src = "Ressources/Others/Music On.png">
+
+
+
+
+        </article>
+
+        </section >
+
+        
+
+        <article id = "characters">
+    
+    
+            <article id = "heroes">
+
+            <img id = "player1" src = "Ressources/Characters/Heroes/Fire/Idle.png">
+            <img id = "player2" src = "Ressources/Characters/Heroes/Water/Idle.png">
+            <img id = "player3" src = "Ressources/Characters/Heroes/Earth/Idle.png">
+            <img id = "player4" src = "Ressources/Characters/Heroes/Wind/Idle.png">
+
+
+
+            </article>
+
+            <article id = "vilains">
+
+            <img id = "vilain1" src = "Ressources/Characters/Vilains/Minotaur/Idle.png">
+            <img id = "vilain2" src = "Ressources/Characters/Vilains/Ogre/Idle.png">
+            <img id = "vilain3" src = "Ressources/Characters/Vilains/Satyr/Idle.png">
+
+
+
+
+            </article>
+
+        </article>
+
+
+        <section id = "bottomSideScreen">
+
+        
+            
+            <section id = "infos">
+
+                <div id ="infosj1"> <strong id = "j1health"></strong><strong id = "j1mana" class="mana"></strong> </div>
+                <div id ="infosj2"><strong id = "j2health"></strong><strong id = "j2mana" class="mana"></strong></div>
+                <div id ="infosj3"><strong id = "j3health"></strong><strong id = "j3mana" class="mana"></strong></div>
+                <div id ="infosj4"><strong id = "j4health"></strong><strong id = "j4mana" class="mana"></strong></div>
+    
+        
+    
+            </section>
+
+            
+            <section id = "options">
+    
+                <strong id = "Attack">Attaquer</strong>
+                <strong id = "Defend">Defendre</strong>
+                <strong id = "Special">Attaque Spéciale</strong>
+                <strong id = "Flee">S'enfuir</strong>
+        
+        
+            </section> 
+            
+            <article id = "buttonEnd">
+
+                <strong id = "buttonEndDiv">Fin du Tour</strong>
+
+            </article>
+            
+
+            <article id = "infosEnemy1">
+
+                <strong id = "enemy1health"></strong>
+                
+    
+            </article>
+
+            <article id = "infosEnemy2">
+
+                
+                <strong id = "enemy2health"></strong>
+                
+    
+            </article>
+
+            <article id = "infosEnemy3">
+
+            
+                <strong id = "enemy3health"></strong>
+    
+            </article>
+            
+           
+    
+    
+        </section>
+
+
+    
+
+
+
+    
+
+    </section>
+
+
+
+
+
+
+
+</body>
+
+
+
+</head>
