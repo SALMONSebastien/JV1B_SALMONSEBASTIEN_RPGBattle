@@ -210,7 +210,6 @@ player1.onclick = function() {
             fireAction = true;
             messageDisplayed.innerHTML = "Fire se prépare !";
             optionsAction.style.visibility = "visible";
-            player1.src = "Ressources/Characters/Heroes/Fire/Attack/atk1.png";
             boutonSpecial.innerHTML = "Spé : Furie";
             clickSound.play()
 
